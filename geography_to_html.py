@@ -5,7 +5,7 @@ import html
 import json
 
 SRC = r"C:\Users\wade\OneDrive\forum_smth\geography_mobile.xml"
-OUT = r"C:\Users\wade\OneDrive\forum_smth\geography_board.html"
+OUT = r"C:\Users\wade\OneDrive\forum_smth\index.html"
 
 with open(SRC, encoding="utf-8") as f:
     content = f.read()
@@ -236,4 +236,4 @@ with open(OUT, "w", encoding="utf-8") as f:
 print("解析条目:", len(items))
 print("置顶:", sum(1 for i in items if i["sticky"]))
 print("最高回复:", max(i["replies"] for i in items))
-print("输出:", OUT)
+print("输出:", OUT, "（GitHub Pages 根路径直接可访问）")

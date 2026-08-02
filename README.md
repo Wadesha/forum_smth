@@ -12,16 +12,23 @@
 | 文件 | 说明 |
 |------|------|
 | `geography_to_html.py` | 解析脚本：从手机版版面列表源码抽取主题帖（标题/回复数/发帖与最后回复时间+作者），生成静态 HTML |
-| `geography_board.html` | 地理(Geography)版第 1/1001 页的静态展示页（深色主题、搜索、排序、仅看置顶，离线可用） |
+| `index.html` | 地理(Geography)版第 1/1001 页的静态展示页（深色主题、搜索、排序、仅看置顶，离线可用；GitHub Pages 根路径直接访问） |
 | `geography_mobile.xml` | 原始抓取源码存档（水木社区手机版 Geography 版面列表页） |
 
 ## 使用
 
 ```bash
-python geography_to_html.py   # 读取 geography_mobile.xml，输出 geography_board.html
+python geography_to_html.py   # 读取 geography_mobile.xml，输出 index.html
 ```
 
-打开 `geography_board.html` 即可离线浏览；标题/作者链接指向原站 `wap.newsmth.net`（需联网）。
+打开 `index.html` 即可离线浏览；标题/作者链接指向原站 `wap.newsmth.net`（需联网）。
+
+## 在线访问（GitHub Pages）
+
+本仓库已启用 GitHub Pages，静态展示页在线地址：
+
+- 首页（地理版快照）：https://wadesha.github.io/forum_smth/
+- 数据源为仓库内的 `geography_mobile.xml`，由 `geography_to_html.py` 解析生成 `index.html`。
 
 ## 说明
 
